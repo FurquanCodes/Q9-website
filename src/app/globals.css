@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+:root {
+  /* Bespoke Executive Palette: Obsidian Onyx Canvas + Radiant Amber & Silver Accents */
+  --bg: #090a0f;
+  --bg-alt: #0e1017;
+  --surface: #13151f;
+  --surface-hover: #181b28;
+  --surface-light: #1c1f30;
+  --surface-modal: #0d0f17;
+  
+  /* Luminous Architectural Borders */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 122, 0, 0.45);
+  --border-glow: rgba(255, 106, 0, 0.5);
+  
+  /* High-Contrast Executive Typography */
+  --text: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-light: #ffffff;
+  --text-link: #ff7a00;
+  
+  /* Official Brand Colors */
+  --primary: #ff6a00;
+  --primary-hover: #ff851a;
+  --accent: #ff7a00;
+  --accent-gold: #ffaa00;
+  --accent-silver: #e5e7eb;
+  --success: #10b981;
+  --error: #ef4444;
+  
+  --nav-h: 96px;
+}
+
+@theme {
+  --font-sans: var(--font-dm-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-light: var(--surface-light);
+  --color-border-line: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-text-main: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-accent: var(--accent);
+  --color-accent-gold: var(--accent-gold);
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle carbon perspective grid */
+.q9-bg-grid {
+  background-size: 56px 56px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* 3D Perspective container */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1400 {
+  perspective: 1400px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Decent, Sleek Executive Cards */
+.q9-card {
+  background: linear-gradient(145deg, rgba(24, 27, 40, 0.7) 0%, rgba(14, 16, 24, 0.85) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 
+    0 16px 36px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s ease, 
+              box-shadow 0.35s ease;
+}
+
+.q9-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: 
+    0 24px 50px rgba(0, 0, 0, 0.65),
+    0 0 24px rgba(255, 106, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+/* Glassmorphism Header */
+.q9-glass {
+  background: rgba(9, 10, 15, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Official Q9 Primary Button */
+.q9-btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff5500 0%, #ff9400 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(255, 106, 0, 0.35), 0 0 14px rgba(255, 170, 0, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.q9-btn-primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: left 0.8s ease;
+}
+
+.q9-btn-primary:hover::after {
+  left: 140%;
+}
+
+.q9-btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(255, 106, 0, 0.5), 0 0 22px rgba(255, 170, 0, 0.3);
+}
+
+/* Secondary Button with clean luminous silver border */
+.q9-btn-secondary {
+  position: relative;
+  background: rgba(255, 255, 255, 0.035);
+  color: #f9fafb;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.q9-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #ff7a00;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Glowing Eyebrow Tag with Decent Orange Accent */
+.q9-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 122, 0, 0.35);
+  background: linear-gradient(90deg, rgba(255, 106, 0, 0.12) 0%, rgba(255, 170, 0, 0.05) 100%);
+  padding: 6px 16px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ff8c1a;
+  box-shadow: 0 0 16px rgba(255, 106, 0, 0.14);
+}
+
+/* Kinetic Shimmer on Headline */
+@keyframes q9ShimmerFlow {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #f3f4f6 20%,
+    #ff7a00 50%,
+    #ffae1a 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: q9ShimmerFlow 6s linear infinite;
+}
+
+/* Selection highlight with brand fiery orange */
+::selection {
+  background-color: #ff6a00;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #ff6a00;
+  color: #ffffff;
+}
+
+/* Custom sleek obsidian scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2230;
+  border-radius: 9999px;
+  border: 2px solid #090a0f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7a00;
+}
+
+/* Focus visible outline in brand orange */
+:focus-visible {
+  outline: 2px solid #ff7a00;
+  outline-offset: 3px;
+}

@@ -1,6 +1,6 @@
 # MISSING-CONTENT.md — Client Input Status
 
-Per `AGENTS.md` section 6, any content not yet supplied by the lead is logged here and hidden behind feature flags or safe placeholders. Never invent content.
+Per project specifications, any content not yet supplied by the lead is logged here and hidden behind feature flags or safe placeholders. Never invent content.
 
 | Item | Current State | Where it appears | Action Required from Lead |
 |---|---|---|---|

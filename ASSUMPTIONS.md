@@ -1,6 +1,6 @@
 # ASSUMPTIONS.md — Architectural & Content Decisions
 
-This file tracks assumptions made during development where details were ambiguous or required standardisation per `AGENTS.md`.
+This file tracks assumptions made during development where details were ambiguous or required standardisation per project specifications.
 
 ## 1. LinkedIn Profile Link
 - **Assumption:** Used `https://www.linkedin.com/company/116006515/` as the public LinkedIn URL.

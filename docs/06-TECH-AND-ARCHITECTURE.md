@@ -24,12 +24,11 @@ cd q9-technologies
 npm i framer-motion lucide-react react-hook-form zod @hookform/resolvers clsx tailwind-merge
 npm i -D prettier prettier-plugin-tailwindcss
 ```
-If the project folder already exists with docs inside, scaffold in a temp folder and move files in; do NOT delete `docs/`, `AGENTS.md` or `GEMINI.md`.
+If the project folder already exists with docs inside, scaffold in a temp folder and move files in; do NOT delete `docs/`.
 
 ## 3. Folder structure
 ```
 q9-technologies/
-├─ AGENTS.md  GEMINI.md
 ├─ docs/                      # the spec files (keep)
 ├─ public/
 │  ├─ favicon.ico  og-image.png (1200x630)  robots.txt (or generated)

@@ -34,21 +34,22 @@ function TeamAvatar({
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="relative mx-auto mb-5 h-24 w-24 sm:h-28 sm:w-28 overflow-hidden rounded-3xl border-2 border-white/10 bg-gradient-to-br from-[#181a26] via-[#10121a] to-[#090a0f] p-1 shadow-xl">
+    <div className="relative mx-auto mb-5 h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-[26px] border-2 border-white/10 bg-gradient-to-br from-[#181a26] via-[#10121a] to-[#090a0f] p-1.5 shadow-2xl transition-all duration-300 group-hover:border-[#ff7a00]/50 group-hover:shadow-[0_0_25px_rgba(255,106,0,0.25)]">
       {avatarUrl && !imageError ? (
-        <div className="relative h-full w-full overflow-hidden rounded-[20px]">
+        <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-[#12141c]">
           <Image
             src={avatarUrl}
             alt={name}
             fill
-            sizes="112px"
-            className="object-cover"
+            sizes="128px"
+            className="object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
             onError={() => setImageError(true)}
+            priority
           />
         </div>
       ) : (
         <div className="flex h-full w-full flex-col items-center justify-center rounded-[20px] bg-gradient-to-br from-orange-500/20 via-amber-500/10 to-transparent border border-white/5">
-          <span className="text-xl sm:text-2xl font-black font-mono tracking-tight bg-gradient-to-r from-white via-zinc-100 to-[#ffaa00] bg-clip-text text-transparent">
+          <span className="text-2xl sm:text-3xl font-black font-mono tracking-tight bg-gradient-to-r from-white via-zinc-100 to-[#ffaa00] bg-clip-text text-transparent">
             {initials}
           </span>
         </div>

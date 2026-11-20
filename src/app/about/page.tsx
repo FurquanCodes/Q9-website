@@ -7,6 +7,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { aboutContent } from "@/content/about";
 import { Reveal } from "@/components/ui/Reveal";
+import { TeamSection } from "@/components/sections/TeamSection";
 import { constructMetadata, generateBreadcrumbsJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
@@ -187,7 +188,10 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      {/* 4. Looking Ahead: Executive Statement */}
+      {/* 4. Leadership & Engineering Team */}
+      <TeamSection />
+
+      {/* 5. Looking Ahead: Executive Statement */}
       <Section variant="default">
         <Container>
           <Reveal>

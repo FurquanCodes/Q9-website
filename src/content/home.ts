@@ -15,14 +15,14 @@ export interface FactItem {
 
 export const homeContent = {
   hero: {
-    eyebrow: "Q9 Technologies",
+    eyebrow: "Simpler Tomorrow • Mobile Software Studio",
     headline: "Great People Building Useful Apps",
     subheadline:
-      "We build mobile applications that solve everyday problems, simplify routine tasks, and create better digital experiences.",
+      "Guided by our core motto 'Simpler Tomorrow', we build mobile applications that solve everyday problems, eliminate digital friction, and create purposeful software.",
     introParagraph:
-      "We build mobile applications that solve everyday problems, simplify routine tasks, and create better digital experiences. Our work begins with understanding what users need and turning those needs into accessible, intuitive, and reliable mobile solutions.",
+      "Guided by our core mission — 'Simpler Tomorrow' — we engineer native Android and iOS applications that solve real-world problems, simplify routine tasks, and create accessible, reliable digital experiences.",
     primaryCta: "Contact us",
-    secondaryCta: "Our approach",
+    secondaryCta: "Explore products",
   },
   facts: [
     {

@@ -7,6 +7,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { Container } from "./Container";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { MobileMenu } from "./MobileMenu";
 import { QuoteModal } from "@/components/contact/QuoteModal";
 import { navLinks, NavItem } from "@/config/nav";
@@ -28,11 +29,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const activeLinks: NavItem[] = [
-    ...navLinks.filter((item) => item.href !== "/contact"),
-    ...(features.apps ? [{ label: "Apps", href: "/apps" }] : []),
-    { label: "Contact", href: "/contact" },
-  ];
+  const activeLinks: NavItem[] = navLinks;
 
   return (
     <>
@@ -82,8 +79,10 @@ export function Navbar() {
             })}
           </nav>
 
-          {/* Desktop Right CTA Button & Mobile Hamburger */}
-          <div className="flex items-center gap-4">
+          {/* Desktop Right CTA Button, Theme Toggle & Mobile Hamburger */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            <ThemeToggle />
+
             {features.quoteModal ? (
               <Button
                 variant="primary"

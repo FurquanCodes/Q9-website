@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { site } from "@/config/site";
 import {
   generateOrganizationJsonLd,
@@ -81,8 +82,13 @@ export default function RootLayout({
   const professionalServiceJsonLd = generateProfessionalServiceJsonLd();
 
   return (
-    <html lang="en" className={dmSans.variable}>
+    <html lang="en" className={dmSans.variable} suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("q9-theme");if(t==="light"){document.documentElement.setAttribute("data-theme","light");document.documentElement.classList.add("light");}}catch(e){}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
@@ -97,18 +103,20 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)] antialiased selection:bg-[var(--primary)] selection:text-white">
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--primary)] focus:text-white focus:rounded-lg focus:outline-none"
-        >
-          Skip to content
-        </a>
-        <BackgroundBeams />
-        <Navbar />
-        <main id="main-content" className="flex-1 flex flex-col">
-          {children}
-        </main>
-        <Footer />
+        <ThemeProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--primary)] focus:text-white focus:rounded-lg focus:outline-none"
+          >
+            Skip to content
+          </a>
+          <BackgroundBeams />
+          <Navbar />
+          <main id="main-content" className="flex-1 flex flex-col">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

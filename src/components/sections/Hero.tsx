@@ -53,7 +53,7 @@ export function Hero() {
                   <span>{hero.primaryCta}</span>
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </Button>
-                <Button href="/approach" variant="secondary" size="lg">
+                <Button href="/products" variant="secondary" size="lg">
                   <Sparkles className="mr-2 h-4 w-4 text-[#ff8c1a]" />
                   <span>{hero.secondaryCta}</span>
                 </Button>

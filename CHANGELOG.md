@@ -2,6 +2,29 @@
 
 All notable changes and build phases for the Q9 Technologies website are documented in this file.
 
+## [1.3.0] - 2026-11-21
+
+### Leadership Team Integration, Products Showcase, Tech Stack, Industry Collaboration & Dual Light/Dark Theme
+- **Leadership & Engineering Team Integration:**
+  - Integrated official executive profiles for **Nadir Abbas** (CEO), **Ehsan Rahim** (Marketing Director), **Raja Husnain Ali** (Production Director), and **Muhammad Asjad** (Full Stack Developer) in `src/content/team.ts`.
+  - Built `TeamSection.tsx` with executive initial monograms, department tags, role specialties, and verified LinkedIn profile links. Photo container is pre-wired to load professional portraits from `/images/team/{id}.jpg` with seamless monogram fallback.
+  - Featured the team prominently on the About Us page (`/about`).
+- **Dedicated Products & Applications Page (`/products`):**
+  - Created `/products` route and `ProductsShowcase.tsx` featuring Q9's mobile app portfolio across Photography (Lumina RAW Studio), Productivity (FlowState Workspace), and Everyday Utilities (OmniTool System Suite, CleanPulse Diagnostic).
+  - Built interactive category filters (All, Photography, Productivity, Utilities) with telemetry specs (Engine, Target FPS, Local Storage), native platform badges, and early access beta request links.
+  - Routed `/apps` to redirect cleanly to `/products` and updated sitemap priorities.
+- **Technologies We Work On:**
+  - Built `TechnologiesSection.tsx` and `src/content/technologies.ts` showcasing high-density engineering stacks across iOS Native (Swift 6.0, SwiftUI, SwiftData, Metal), Android Native (Kotlin, Jetpack Compose, Room, CameraX), Full-Stack Web (TypeScript, Next.js 16, React 19, Node.js), and Cloud Systems.
+  - Featured on both the Home page and Products page.
+- **Industry Collaboration & Co-Engineering:**
+  - Built `CollaborationSection.tsx` and `src/content/collaboration.ts` focusing on open industry co-development with fellow software houses, product founders, and engineering teams.
+- **Home Page Focused on "Simpler Tomorrow":**
+  - Elevated the "Simpler Tomorrow" motto as the core narrative anchor across the Home page hero, section headers, and mission statements.
+- **Dual Light & Dark Theme System:**
+  - Engineered zero-flash, React 19 compliant theme architecture using `useSyncExternalStore` and `localStorage` persistence in `ThemeProvider.tsx`.
+  - Built interactive `ThemeToggle.tsx` with Sun/Moon icons in the desktop Navbar and mobile drawer.
+  - Added comprehensive high-legibility light theme styling in `globals.css` with crisp contrast, slate typography, and signature warm orange accents.
+
 ## [1.2.0] - 2026-11-19
 
 ### Brand Identity & Executive Polish (Decent Obsidian & Warm Orange Palette)

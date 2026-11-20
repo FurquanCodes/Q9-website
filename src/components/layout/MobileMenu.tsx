@@ -7,6 +7,7 @@ import { X, ArrowRight } from "lucide-react";
 import { NavItem } from "@/config/nav";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { site } from "@/config/site";
 import { cn } from "@/lib/utils";
 
@@ -57,14 +58,18 @@ export function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
       <div className="flex items-center justify-between border-b border-white/[0.08] pb-6">
         <Logo />
 
-        <button
-          type="button"
-          onClick={onClose}
-          className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-[#12141c] text-white hover:border-[#ff7a00]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a00] cursor-pointer"
-          aria-label="Close navigation menu"
-        >
-          <X className="h-6 w-6" aria-hidden="true" />
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+
+          <button
+            type="button"
+            onClick={onClose}
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-[#12141c] text-white hover:border-[#ff7a00]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a00] cursor-pointer"
+            aria-label="Close navigation menu"
+          >
+            <X className="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
       </div>
 
       {/* Nav Links */}

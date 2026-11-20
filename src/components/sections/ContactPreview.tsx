@@ -51,13 +51,13 @@ export function ContactPreview() {
                 <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-orange-500/15 border border-orange-400/30 text-[#ff6a00] mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
                   <Mail className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#ff8c1a]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#ea580c] dark:text-[#ff8c1a]">
                   Email
                 </span>
-                <span className="mt-2 text-sm font-semibold text-white break-all transition-colors group-hover:text-[#ff8c1a]">
+                <span className="mt-2 text-sm font-semibold text-slate-900 dark:text-white break-all transition-colors group-hover:text-[#ff8c1a]">
                   {site.email}
                 </span>
-                <span className="mt-1 text-xs text-zinc-500">
+                <span className="mt-1 text-xs text-slate-500 dark:text-zinc-500">
                   Send us an email
                 </span>
               </SpotlightCard>
@@ -74,16 +74,16 @@ export function ContactPreview() {
                 spotlightColor="rgba(255, 170, 0, 0.22)"
                 className="flex flex-col h-full group"
               >
-                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-amber-500/15 border border-amber-400/30 text-[#ffaa00] mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
+                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-amber-500/15 border border-amber-400/30 text-[#d97706] dark:text-[#ffaa00] mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
                   <Phone className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#ffaa00]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#d97706] dark:text-[#ffaa00]">
                   Phone
                 </span>
-                <span className="mt-2 text-sm font-semibold text-white transition-colors group-hover:text-[#ffaa00]">
+                <span className="mt-2 text-sm font-semibold text-slate-900 dark:text-white transition-colors group-hover:text-[#ffaa00]">
                   {site.phoneDisplay}
                 </span>
-                <span className="mt-1 text-xs text-zinc-500">
+                <span className="mt-1 text-xs text-slate-500 dark:text-zinc-500">
                   Direct mobile & voice
                 </span>
               </SpotlightCard>
@@ -102,16 +102,16 @@ export function ContactPreview() {
                 spotlightColor="rgba(16, 185, 129, 0.22)"
                 className="flex flex-col h-full group"
               >
-                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-emerald-500/15 border border-emerald-400/30 text-emerald-400 mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
+                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-emerald-500/15 border border-emerald-400/30 text-emerald-600 dark:text-emerald-400 mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
                   <MapPin className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
                   Office
                 </span>
-                <span className="mt-2 text-sm font-semibold text-white leading-snug transition-colors group-hover:text-emerald-400">
+                <span className="mt-2 text-sm font-semibold text-slate-900 dark:text-white leading-snug transition-colors group-hover:text-emerald-400">
                   {site.address.line1}, {site.address.city}
                 </span>
-                <span className="mt-1 text-xs text-zinc-500">
+                <span className="mt-1 text-xs text-slate-500 dark:text-zinc-500">
                   View on Google Maps
                 </span>
               </SpotlightCard>
@@ -130,16 +130,16 @@ export function ContactPreview() {
                 spotlightColor="rgba(255, 255, 255, 0.15)"
                 className="flex flex-col h-full group"
               >
-                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-white/10 border border-white/20 text-zinc-200 mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
+                <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/10 border border-slate-200 dark:border-white/20 text-slate-700 dark:text-zinc-200 mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg">
                   <LinkedinIcon className="h-6 w-6" />
                 </div>
-                <span className="text-xs font-bold uppercase tracking-wider text-zinc-400">
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-zinc-400">
                   LinkedIn
                 </span>
-                <span className="mt-2 text-sm font-semibold text-white transition-colors group-hover:text-white">
+                <span className="mt-2 text-sm font-semibold text-slate-900 dark:text-white transition-colors group-hover:text-[#ff8c1a]">
                   Q9 Technologies
                 </span>
-                <span className="mt-1 text-xs text-zinc-500">
+                <span className="mt-1 text-xs text-slate-500 dark:text-zinc-500">
                   Official company page
                 </span>
               </SpotlightCard>

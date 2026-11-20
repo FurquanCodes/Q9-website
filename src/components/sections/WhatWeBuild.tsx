@@ -74,15 +74,15 @@ export function WhatWeBuild() {
                       >
                         {visual.icon}
                       </div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-700 dark:text-zinc-400 rounded-full border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/[0.04] px-2.5 py-1">
                         {visual.badge}
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold tracking-tight text-white transition-colors duration-200 group-hover:text-[#ff8c1a]">
+                    <h3 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-200 group-hover:text-[#ff8c1a]">
                       {card.category}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-zinc-400">
                       {card.description}
                     </p>
 
@@ -91,7 +91,7 @@ export function WhatWeBuild() {
                       {visual.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[11px] font-medium text-zinc-400 bg-white/[0.04] border border-white/5 rounded-lg px-2.5 py-1"
+                          className="text-[11px] font-medium text-slate-600 dark:text-zinc-400 bg-slate-100 dark:bg-white/[0.04] border border-slate-200 dark:border-white/5 rounded-lg px-2.5 py-1"
                         >
                           {tag}
                         </span>
@@ -100,10 +100,10 @@ export function WhatWeBuild() {
                   </div>
 
                   {features.apps && (
-                    <div className="mt-6 pt-4 border-t border-white/10">
+                    <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10">
                       <Link
-                        href="/apps"
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ff8c1a] hover:text-white transition-colors"
+                        href="/products"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ea580c] dark:text-[#ff8c1a] hover:text-[#c2410c] dark:hover:text-white transition-colors"
                       >
                         <span>Explore apps</span>
                         <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />

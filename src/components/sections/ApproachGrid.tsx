@@ -76,10 +76,10 @@ export function ApproachGrid() {
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold tracking-tight text-white transition-colors duration-200 group-hover:text-[#ff8c1a]">
+                    <h3 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white transition-colors duration-200 group-hover:text-[#ff8c1a]">
                       {step.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-zinc-400">
                       {step.description}
                     </p>
                   </div>
@@ -93,7 +93,7 @@ export function ApproachGrid() {
           <Reveal delay={0.4}>
             <Link
               href={approachPreview.ctaHref}
-              className="inline-flex items-center gap-2 font-bold text-sm sm:text-base text-[#ffaa00] hover:text-white transition-colors group"
+              className="inline-flex items-center gap-2 font-bold text-sm sm:text-base text-[#ea580c] dark:text-[#ffaa00] hover:text-[#c2410c] dark:hover:text-white transition-colors group"
             >
               <span>{approachPreview.ctaText}</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1.5" aria-hidden="true" />

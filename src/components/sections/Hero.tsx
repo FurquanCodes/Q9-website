@@ -31,7 +31,7 @@ export function Hero() {
             {/* Kinetic Shimmer H1 Headline with Brand Orange Accent */}
             <Reveal delay={0.2}>
               <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.12]">
-                <span className="text-white">Great People </span>
+                <span className="text-slate-900 dark:text-white">Great People </span>
                 <span className="animate-shimmer">Building Useful </span>
                 <span className="bg-gradient-to-r from-[#ff6a00] via-[#ffaa00] to-[#ffc04d] bg-clip-text text-transparent">
                   Apps
@@ -41,7 +41,7 @@ export function Hero() {
 
             {/* Intro paragraph with rich readability */}
             <Reveal delay={0.3}>
-              <p className="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-zinc-300">
+              <p className="mt-6 max-w-2xl text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-zinc-300">
                 {hero.introParagraph}
               </p>
             </Reveal>

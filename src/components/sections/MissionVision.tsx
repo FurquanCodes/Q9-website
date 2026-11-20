@@ -24,15 +24,15 @@ export function MissionVision() {
                   <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-orange-500/15 border border-orange-400/30 text-[#ff6a00] transition-transform duration-300 group-hover:scale-110 shadow-lg">
                     <Target className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#ff8c1a] rounded-full border border-orange-500/30 bg-orange-500/10 px-3.5 py-1">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#ea580c] dark:text-[#ff8c1a] rounded-full border border-orange-500/30 bg-orange-500/10 px-3.5 py-1">
                     {mission.eyebrow}
                   </span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-4 transition-colors group-hover:text-[#ff8c1a]">
+                <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 transition-colors group-hover:text-[#ff8c1a]">
                   {mission.title}
                 </h3>
-                <p className="text-base sm:text-lg leading-relaxed text-zinc-400">
+                <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-zinc-400">
                   {mission.statement}
                 </p>
               </div>
@@ -47,18 +47,18 @@ export function MissionVision() {
             >
               <div>
                 <div className="flex items-center justify-between gap-4 mb-6">
-                  <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-amber-500/15 border border-amber-400/30 text-[#ffaa00] transition-transform duration-300 group-hover:scale-110 shadow-lg">
+                  <div className="flex h-13 w-13 items-center justify-center rounded-2xl bg-amber-500/15 border border-amber-400/30 text-[#d97706] dark:text-[#ffaa00] transition-transform duration-300 group-hover:scale-110 shadow-lg">
                     <Eye className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#ffaa00] rounded-full border border-amber-500/30 bg-amber-500/10 px-3.5 py-1">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#d97706] dark:text-[#ffaa00] rounded-full border border-amber-500/30 bg-amber-500/10 px-3.5 py-1">
                     {vision.eyebrow}
                   </span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-4 transition-colors group-hover:text-[#ffaa00]">
+                <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-4 transition-colors group-hover:text-[#ffaa00]">
                   {vision.title}
                 </h3>
-                <p className="text-base sm:text-lg leading-relaxed text-zinc-400">
+                <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-zinc-400">
                   {vision.statement}
                 </p>
               </div>

@@ -33,9 +33,9 @@ export function Button({
     primary:
       "relative overflow-hidden bg-gradient-to-r from-[#ff6a00] via-[#ff7a00] to-[#ffaa00] text-white shadow-[0_8px_25px_rgba(255,106,0,0.35)] hover:shadow-[0_12px_32px_rgba(255,106,0,0.5)] hover:brightness-110 active:scale-[0.98]",
     secondary:
-      "bg-white/[0.04] text-white border border-white/15 hover:bg-white/[0.08] hover:border-[#ff7a00]/50 hover:text-white hover:shadow-[0_0_20px_rgba(255,106,0,0.15)] active:scale-[0.98]",
+      "bg-white dark:bg-white/[0.04] text-slate-900 dark:text-white border border-slate-300 dark:border-white/15 hover:bg-slate-50 dark:hover:bg-white/[0.08] hover:border-[#ff7a00]/50 hover:text-[#ea580c] dark:hover:text-white shadow-sm dark:shadow-none hover:shadow-[0_0_20px_rgba(255,106,0,0.15)] active:scale-[0.98]",
     ghost:
-      "bg-transparent text-zinc-400 hover:text-white hover:bg-white/[0.05]",
+      "bg-transparent text-slate-700 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.05]",
   };
 
   const combinedClass = cn(

@@ -35,10 +35,10 @@ export function TechnologiesSection() {
             <div className="q9-eyebrow mb-2">
               <span>{technologiesContent.eyebrow}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               {technologiesContent.title}
             </h2>
-            <p className="mt-3 text-base sm:text-lg text-zinc-400 leading-relaxed">
+            <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-zinc-400 leading-relaxed">
               {technologiesContent.subtitle}
             </p>
           </div>
@@ -50,19 +50,19 @@ export function TechnologiesSection() {
             <Reveal key={group.id} delay={0.1 * (idx + 1)}>
               <SpotlightCard
                 spotlightColor="rgba(255, 122, 0, 0.14)"
-                className="h-full p-6 sm:p-8 flex flex-col justify-between border border-white/10 bg-[#0e1017]/90 rounded-3xl group"
+                className="h-full p-6 sm:p-8 flex flex-col justify-between border border-slate-200/90 dark:border-white/10 bg-white dark:bg-[#0e1017]/90 rounded-3xl group shadow-sm dark:shadow-none"
               >
                 <div>
                   {/* Category Header */}
                   <div className="flex items-center gap-3.5 mb-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.05] border border-white/10 group-hover:border-[#ff7a00]/40 transition-colors shadow-inner">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 group-hover:border-[#ff7a00]/40 transition-colors shadow-inner">
                       {getIcon(group.iconName)}
                     </div>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#ffaa00] transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-[#ffaa00] transition-colors">
                         {group.category}
                       </h3>
-                      <p className="text-xs text-zinc-400 mt-0.5">
+                      <p className="text-xs text-slate-600 dark:text-zinc-400 mt-0.5">
                         {group.description}
                       </p>
                     </div>
@@ -73,14 +73,14 @@ export function TechnologiesSection() {
                     {group.technologies.map((tech) => (
                       <div
                         key={tech.name}
-                        className="rounded-xl border border-white/[0.08] bg-white/[0.03] p-2.5 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.06]"
+                        className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50 dark:bg-white/[0.03] p-2.5 transition-all duration-200 hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-100 dark:hover:bg-white/[0.06]"
                       >
-                        <div className="text-xs font-bold text-white truncate">
+                        <div className="text-xs font-bold text-slate-900 dark:text-white truncate">
                           {tech.name}
                         </div>
                         <div className="flex items-center justify-between mt-1 text-[10px]">
-                          <span className="text-zinc-400 truncate">{tech.level}</span>
-                          <span className="font-mono text-[#ff8c1a] bg-[#ff7a00]/10 px-1 py-0.2 rounded text-[9px] shrink-0">
+                          <span className="text-slate-500 dark:text-zinc-400 truncate">{tech.level}</span>
+                          <span className="font-mono text-[#ea580c] dark:text-[#ff8c1a] bg-orange-500/10 px-1 py-0.2 rounded text-[9px] shrink-0">
                             {tech.tag}
                           </span>
                         </div>
@@ -90,12 +90,12 @@ export function TechnologiesSection() {
                 </div>
 
                 {/* Bottom Verification Note */}
-                <div className="mt-6 pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs text-zinc-400">
+                <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/[0.08] flex items-center justify-between text-xs text-slate-500 dark:text-zinc-400">
                   <span className="flex items-center gap-1.5">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
                     <span>Production Verified</span>
                   </span>
-                  <span className="font-mono text-[11px] text-zinc-500">Native Standards</span>
+                  <span className="font-mono text-[11px] text-slate-400 dark:text-zinc-500">Native Standards</span>
                 </div>
               </SpotlightCard>
             </Reveal>

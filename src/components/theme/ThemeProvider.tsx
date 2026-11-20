@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useCallback, useSyncExternalStore } from "react";
+import React, { createContext, useContext, useCallback, useEffect, useSyncExternalStore } from "react";
 
 type Theme = "dark" | "light";
 
@@ -46,6 +46,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       root.setAttribute("data-theme", "dark");
     }
   }, []);
+
+  useEffect(() => {
+    applyTheme(theme);
+  }, [theme, applyTheme]);
 
   const setTheme = useCallback(
     (newTheme: Theme) => {

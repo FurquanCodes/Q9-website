@@ -114,14 +114,14 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
   if (submitStatus === "success") {
     return (
       <div
-        className="rounded-[22px] border border-emerald-500/30 bg-gradient-to-b from-[#181b28] to-[#13151f] p-8 sm:p-10 text-center shadow-2xl animate-in fade-in duration-300"
+        className="rounded-[22px] border border-emerald-500/30 bg-emerald-50 dark:bg-gradient-to-b dark:from-[#181b28] dark:to-[#13151f] p-8 sm:p-10 text-center shadow-xl dark:shadow-2xl animate-in fade-in duration-300"
         aria-live="polite"
       >
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-400 mb-5 border border-emerald-500/25">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 mb-5 border border-emerald-500/25">
           <CheckCircle2 className="h-7 w-7" aria-hidden="true" />
         </div>
-        <h3 className="text-2xl font-bold text-white">Message Sent</h3>
-        <p className="mt-3 text-base text-[#9ca3af] max-w-md mx-auto leading-relaxed">
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Message Sent</h3>
+        <p className="mt-3 text-base text-slate-600 dark:text-[#9ca3af] max-w-md mx-auto leading-relaxed">
           {feedbackMessage}
         </p>
         <div className="mt-8 flex justify-center">

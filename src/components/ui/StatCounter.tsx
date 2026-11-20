@@ -67,8 +67,8 @@ export function StatCounter({
         className
       )}
     >
-      <div className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white font-mono">
-        <span className="q9-stat-value bg-gradient-to-r from-white via-zinc-100 to-[#ffaa00] bg-clip-text text-transparent">
+      <div className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white font-mono">
+        <span className="q9-stat-value bg-gradient-to-r from-slate-900 via-slate-800 to-[#ea580c] dark:from-white dark:via-zinc-100 dark:to-[#ffaa00] bg-clip-text text-transparent">
           {displayValue}
           {suffix}
         </span>

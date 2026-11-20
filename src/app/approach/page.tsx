@@ -99,15 +99,15 @@ export default function ApproachPage() {
                             </div>
                           </div>
 
-                          <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3">
+                          <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
                             {step.title}
                           </h3>
-                          <p className="text-base sm:text-lg leading-relaxed text-[#9ca3af] mb-6">
+                          <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-[#9ca3af] mb-6">
                             {step.description}
                           </p>
 
                           {/* Phase Goal / Deliverable */}
-                          <div className="pt-4 border-t border-white/10 flex items-center gap-2.5 text-xs font-semibold text-zinc-300">
+                          <div className="pt-4 border-t border-slate-200 dark:border-white/10 flex items-center gap-2.5 text-xs font-semibold text-slate-700 dark:text-zinc-300">
                             <CheckCircle2 className="h-4 w-4 text-[#ff8c1a] shrink-0" />
                             <span>{meta.deliverable}</span>
                           </div>
@@ -116,7 +116,7 @@ export default function ApproachPage() {
 
                       {/* Right Column / Step Counter Indicator */}
                       <div className={`lg:col-span-6 flex ${isEven ? "lg:order-1 lg:justify-end" : "lg:order-2 lg:justify-start"}`}>
-                        <div className="hidden lg:flex items-center justify-center h-20 w-20 rounded-full border border-white/15 bg-[#13151f] shadow-2xl text-2xl font-black font-mono text-zinc-400">
+                        <div className="hidden lg:flex items-center justify-center h-20 w-20 rounded-full border border-slate-200 dark:border-white/15 bg-white dark:bg-[#13151f] shadow-lg dark:shadow-2xl text-2xl font-black font-mono text-slate-800 dark:text-zinc-400">
                           {step.step}
                         </div>
                       </div>
@@ -130,21 +130,21 @@ export default function ApproachPage() {
           {/* Highlighted Ongoing Development Philosophy Callout */}
           <div className="mt-20 sm:mt-28">
             <Reveal>
-              <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[32px] border border-[rgba(255,140,26,0.35)] bg-gradient-to-r from-[#181b28]/95 via-[#13151f]/95 to-[#0e1017]/95 p-8 sm:p-14 shadow-2xl backdrop-blur-2xl">
+              <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[32px] border border-orange-500/30 bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-white dark:from-[#181b28]/95 dark:via-[#13151f]/95 dark:to-[#0e1017]/95 p-8 sm:p-14 shadow-xl dark:shadow-2xl backdrop-blur-2xl">
                 <Quote className="h-10 w-10 text-[#ff8c1a] opacity-50 mb-5" />
-                <p className="text-xl sm:text-2xl lg:text-3xl font-bold leading-relaxed text-white">
+                <p className="text-xl sm:text-2xl lg:text-3xl font-bold leading-relaxed text-slate-900 dark:text-white">
                   &ldquo;{callout.statement}&rdquo;
                 </p>
-                <div className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-white/10">
+                <div className="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-slate-200 dark:border-white/10">
                   <div className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-[#ff7a00] animate-ping" />
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#ff8c1a]">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#ea580c] dark:text-[#ff8c1a]">
                       Q9 Lifecycle Assurance
                     </span>
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#ff8c1a] transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white hover:text-[#ff8c1a] dark:hover:text-[#ff8c1a] transition-colors"
                   >
                     <span>Discuss your app idea</span>
                     <ArrowRight className="h-4 w-4" />

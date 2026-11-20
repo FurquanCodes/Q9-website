@@ -47,13 +47,13 @@ export function ContactInfo() {
               <Mail className="h-5 w-5" aria-hidden="true" />
             </div>
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#ff8c1a]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#ea580c] dark:text-[#ff8c1a]">
                 Email
               </span>
-              <p className="mt-1 text-sm sm:text-base font-semibold text-white break-all transition-colors group-hover:text-[#ff8c1a]">
+              <p className="mt-1 text-sm sm:text-base font-semibold text-slate-900 dark:text-white break-all transition-colors group-hover:text-[#ff8c1a]">
                 {site.email}
               </p>
-              <span className="mt-0.5 text-xs text-zinc-400">
+              <span className="mt-0.5 text-xs text-slate-500 dark:text-zinc-400">
                 Direct email correspondence
               </span>
             </div>
@@ -61,7 +61,7 @@ export function ContactInfo() {
           <button
             type="button"
             onClick={(e) => copyToClipboard(site.email, "email", e)}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-[#13151f] text-zinc-400 hover:border-[#ff7a00]/50 hover:text-white transition-colors cursor-pointer"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-[#13151f] text-slate-700 dark:text-zinc-400 hover:border-[#ff7a00]/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
             aria-label="Copy email address"
             title="Copy email"
           >
@@ -84,17 +84,17 @@ export function ContactInfo() {
           className="flex items-center justify-between p-5 group"
         >
           <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/[0.06] border border-white/20 text-zinc-200 transition-transform duration-300 group-hover:scale-105 shadow-md">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-slate-100 dark:bg-white/[0.06] border border-slate-200 dark:border-white/20 text-slate-700 dark:text-zinc-200 transition-transform duration-300 group-hover:scale-105 shadow-md">
               <Phone className="h-5 w-5" aria-hidden="true" />
             </div>
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-zinc-300">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-300">
                 Phone
               </span>
-              <p className="mt-1 text-sm sm:text-base font-semibold text-white transition-colors group-hover:text-[#ff8c1a]">
+              <p className="mt-1 text-sm sm:text-base font-semibold text-slate-900 dark:text-white transition-colors group-hover:text-[#ff8c1a]">
                 {site.phoneDisplay}
               </p>
-              <span className="mt-0.5 text-xs text-zinc-400">
+              <span className="mt-0.5 text-xs text-slate-500 dark:text-zinc-400">
                 Voice & mobile calls
               </span>
             </div>
@@ -102,7 +102,7 @@ export function ContactInfo() {
           <button
             type="button"
             onClick={(e) => copyToClipboard(site.phoneTel, "phone", e)}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-[#13151f] text-zinc-400 hover:border-[#ff7a00]/50 hover:text-white transition-colors cursor-pointer"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-[#13151f] text-slate-700 dark:text-zinc-400 hover:border-[#ff7a00]/50 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
             aria-label="Copy phone number"
             title="Copy phone"
           >
@@ -126,17 +126,17 @@ export function ContactInfo() {
           spotlightColor="rgba(255, 170, 0, 0.16)"
           className="flex items-start gap-4 p-5 group"
         >
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/30 text-[#ffaa00] transition-transform duration-300 group-hover:scale-105 shadow-md">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/30 text-[#d97706] dark:text-[#ffaa00] transition-transform duration-300 group-hover:scale-105 shadow-md">
             <MapPin className="h-5 w-5" aria-hidden="true" />
           </div>
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#ffaa00]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#d97706] dark:text-[#ffaa00]">
               Office Location
             </span>
-            <p className="mt-1 text-sm sm:text-base font-semibold text-white leading-snug transition-colors group-hover:text-[#ff8c1a]">
+            <p className="mt-1 text-sm sm:text-base font-semibold text-slate-900 dark:text-white leading-snug transition-colors group-hover:text-[#ff8c1a]">
               {site.address.full}
             </p>
-            <span className="mt-0.5 text-xs text-zinc-400">
+            <span className="mt-0.5 text-xs text-slate-500 dark:text-zinc-400">
               Open location on Google Maps
             </span>
           </div>
@@ -158,13 +158,13 @@ export function ContactInfo() {
             <LinkedinIcon className="h-5 w-5" />
           </div>
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#ff8c1a]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#ea580c] dark:text-[#ff8c1a]">
               LinkedIn
             </span>
-            <p className="mt-1 text-sm sm:text-base font-semibold text-white transition-colors group-hover:text-[#ff8c1a]">
+            <p className="mt-1 text-sm sm:text-base font-semibold text-slate-900 dark:text-white transition-colors group-hover:text-[#ff8c1a]">
               Q9 Technologies
             </p>
-            <span className="mt-0.5 text-xs text-zinc-400">
+            <span className="mt-0.5 text-xs text-slate-500 dark:text-zinc-400">
               Official company page
             </span>
           </div>

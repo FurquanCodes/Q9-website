@@ -58,20 +58,20 @@ export function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
       <div
         ref={modalRef}
         tabIndex={-1}
-        className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-[24px] border border-white/10 bg-[#10121a] p-6 sm:p-8 shadow-[0_30px_80px_rgba(0,0,0,0.7)] focus:outline-none"
+        className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-[24px] border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10121a] p-6 sm:p-8 shadow-2xl focus:outline-none"
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <div className="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-white/10 mb-6">
           <div>
-            <h2 id="quote-modal-title" className="text-xl font-bold text-white">
+            <h2 id="quote-modal-title" className="text-xl font-bold text-slate-900 dark:text-white">
               Start a Project
             </h2>
-            <p className="text-xs text-[#ffaa00]">Tell us about your next mobile idea</p>
+            <p className="text-xs text-[#ea580c] dark:text-[#ffaa00]">Tell us about your next mobile idea</p>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-[#161822] text-white hover:border-[#ff7a00]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a00] cursor-pointer"
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-[#161822] text-slate-700 dark:text-white hover:border-[#ff7a00]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a00] cursor-pointer"
             aria-label="Close modal"
           >
             <X className="h-5 w-5" aria-hidden="true" />

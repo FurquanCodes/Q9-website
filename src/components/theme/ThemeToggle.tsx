@@ -17,7 +17,7 @@ export function ThemeToggle({ className }: { className?: string }) {
   if (!isMounted) {
     return (
       <div
-        className={`flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-[#12141c] text-zinc-400 opacity-60 ${className || ""}`}
+        className={`flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-[#12141c] text-slate-500 dark:text-zinc-400 opacity-60 ${className || ""}`}
         aria-hidden="true"
       >
         <Moon className="h-4 w-4" />

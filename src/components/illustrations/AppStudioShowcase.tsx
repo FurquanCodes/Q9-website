@@ -84,7 +84,7 @@ export function AppStudioShowcase() {
       />
 
       {/* 2. Top Interactive Category Selector */}
-      <div className="relative z-20 mb-6 flex items-center gap-1.5 rounded-full border border-white/10 bg-[#0e1017]/90 p-1.5 shadow-2xl backdrop-blur-xl">
+      <div className="relative z-20 mb-6 flex items-center gap-1.5 rounded-full border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-[#0e1017]/90 p-1.5 shadow-md dark:shadow-2xl backdrop-blur-xl">
         {CATEGORIES.map((cat) => {
           const isActive = cat.id === activeCategory;
           return (
@@ -98,7 +98,7 @@ export function AppStudioShowcase() {
               className={`relative flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all duration-300 ${
                 isActive
                   ? "text-white shadow-lg"
-                  : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.04]"
+                  : "text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 hover:bg-slate-100 dark:hover:bg-white/[0.04]"
               }`}
             >
               {isActive && (
@@ -122,17 +122,17 @@ export function AppStudioShowcase() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute -top-4 -left-4 sm:-left-8 z-30 hidden xs:flex items-center gap-2.5 rounded-2xl border border-white/10 bg-[#13151f]/95 px-3.5 py-2.5 shadow-[0_12px_30px_rgba(0,0,0,0.5)] backdrop-blur-md"
+          className="absolute -top-4 -left-4 sm:-left-8 z-30 hidden xs:flex items-center gap-2.5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-[#13151f]/95 px-3.5 py-2.5 shadow-lg dark:shadow-[0_12px_30px_rgba(0,0,0,0.5)] backdrop-blur-md"
         >
           <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[#ff6a00] to-[#ffaa00] text-white shadow-md">
             <Smartphone className="h-4 w-4" />
           </div>
           <div className="text-left">
-            <div className="text-[11px] font-bold text-white flex items-center gap-1.5">
+            <div className="text-[11px] font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
               <span>SwiftUI & Compose</span>
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
             </div>
-            <div className="text-[10px] text-zinc-400">100% Native Architecture</div>
+            <div className="text-[10px] text-slate-500 dark:text-zinc-400">100% Native Architecture</div>
           </div>
         </motion.div>
 
@@ -141,17 +141,17 @@ export function AppStudioShowcase() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute -bottom-4 -right-2 sm:-right-6 z-30 hidden xs:flex items-center gap-2.5 rounded-2xl border border-white/10 bg-[#13151f]/95 px-3.5 py-2.5 shadow-[0_12px_30px_rgba(0,0,0,0.5)] backdrop-blur-md"
+          className="absolute -bottom-4 -right-2 sm:-right-6 z-30 hidden xs:flex items-center gap-2.5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white/95 dark:bg-[#13151f]/95 px-3.5 py-2.5 shadow-lg dark:shadow-[0_12px_30px_rgba(0,0,0,0.5)] backdrop-blur-md"
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-white/[0.08] border border-white/20 text-[#ffaa00] shadow-md">
+          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-slate-100 dark:bg-white/[0.08] border border-slate-200 dark:border-white/20 text-[#ea580c] dark:text-[#ffaa00] shadow-md">
             <Cpu className="h-4 w-4" />
           </div>
           <div className="text-left">
-            <div className="text-[11px] font-bold text-white flex items-center gap-1.5">
+            <div className="text-[11px] font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
               <span>60 FPS Verified</span>
-              <span className="text-[9px] font-mono text-[#ffaa00]">0ms Jitter</span>
+              <span className="text-[9px] font-mono text-[#ea580c] dark:text-[#ffaa00]">0ms Jitter</span>
             </div>
-            <div className="text-[10px] text-zinc-400">High-Performance Runtime</div>
+            <div className="text-[10px] text-slate-500 dark:text-zinc-400">High-Performance Runtime</div>
           </div>
         </motion.div>
 

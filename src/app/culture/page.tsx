@@ -93,10 +93,10 @@ export default function CulturePage() {
                           Pillar 0{idx + 1}
                         </span>
                       </div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 transition-colors group-hover:text-[#ff8c1a]">
+                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3 transition-colors group-hover:text-[#ff8c1a]">
                         {item.title}
                       </h3>
-                      <p className="text-base sm:text-lg leading-relaxed text-zinc-400">
+                      <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-zinc-400">
                         {item.description}
                       </p>
                     </div>
@@ -128,14 +128,14 @@ export default function CulturePage() {
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-xs font-black font-mono text-[#ff8c1a] bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/30">
+                      <span className="text-xs font-black font-mono text-[#ea580c] dark:text-[#ff8c1a] bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/30">
                         {val.number}
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-white transition-colors group-hover:text-[#ff8c1a] mb-2">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white transition-colors group-hover:text-[#ff8c1a] mb-2">
                       {val.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-zinc-400">
+                    <p className="text-sm leading-relaxed text-slate-600 dark:text-zinc-400">
                       {val.description}
                     </p>
                   </div>
@@ -147,17 +147,17 @@ export default function CulturePage() {
           {/* Dedicated Culture Closing Statement */}
           <div className="mt-16 sm:mt-24 text-center">
             <Reveal>
-              <div className="mx-auto max-w-2xl rounded-2xl border border-white/10 bg-[#13151f]/80 p-8 shadow-xl">
+              <div className="mx-auto max-w-2xl rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#13151f]/80 p-8 shadow-xl">
                 <HeartHandshake className="h-8 w-8 text-[#ff8c1a] mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
                   Built on Ownership & Mutual Respect
                 </h3>
-                <p className="text-sm sm:text-base text-zinc-400 leading-relaxed mb-6">
+                <p className="text-sm sm:text-base text-slate-600 dark:text-zinc-400 leading-relaxed mb-6">
                   Building a workplace where people and partners develop their capabilities, contribute meaningfully, and grow through opportunity and merit.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#ff8c1a] hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#ea580c] dark:text-[#ff8c1a] hover:text-[#c2410c] dark:hover:text-white transition-colors"
                 >
                   <span>Get in touch with our team</span>
                   <ArrowRight className="h-4 w-4" />

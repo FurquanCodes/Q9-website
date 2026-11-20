@@ -82,11 +82,11 @@ export default function RootLayout({
   const professionalServiceJsonLd = generateProfessionalServiceJsonLd();
 
   return (
-    <html lang="en" className={dmSans.variable} suppressHydrationWarning>
+    <html lang="en" className={`${dmSans.variable} dark`} data-theme="dark" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem("q9-theme");if(t==="light"){document.documentElement.setAttribute("data-theme","light");document.documentElement.classList.add("light");}}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem("q9-theme");if(t==="light"){document.documentElement.setAttribute("data-theme","light");document.documentElement.classList.remove("dark");document.documentElement.classList.add("light");}else{document.documentElement.setAttribute("data-theme","dark");document.documentElement.classList.add("dark");document.documentElement.classList.remove("light");}}catch(e){}})();`,
           }}
         />
         <script

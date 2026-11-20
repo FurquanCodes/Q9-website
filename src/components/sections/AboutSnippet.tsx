@@ -43,7 +43,7 @@ export function AboutSnippet() {
           {/* Left Column: Layered 3D App Lifecycle Glass Card Visual */}
           <div className="lg:col-span-6 order-2 lg:order-1">
             <Reveal delay={0.2}>
-              <div className="relative mx-auto max-w-lg rounded-[32px] border border-white/10 bg-gradient-to-br from-[#161822]/95 via-[#11131b]/95 to-[#0b0c12]/98 p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.6),0_0_40px_rgba(255,106,0,0.06)] backdrop-blur-2xl">
+              <div className="relative mx-auto max-w-lg rounded-[32px] border border-slate-200 dark:border-white/10 bg-white dark:bg-gradient-to-br dark:from-[#161822]/95 dark:via-[#11131b]/95 dark:to-[#0b0c12]/98 p-6 sm:p-8 shadow-xl dark:shadow-[0_25px_60px_rgba(0,0,0,0.6),0_0_40px_rgba(255,106,0,0.06)] backdrop-blur-2xl">
                 {/* Ambient corner glow */}
                 <div
                   className="pointer-events-none absolute -top-12 -right-12 h-44 w-44 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,106,0,0.15)_0%,transparent_70%)] blur-2xl"
@@ -51,18 +51,18 @@ export function AboutSnippet() {
                 />
 
                 {/* Card Top Bar */}
-                <div className="flex items-center justify-between border-b border-white/10 pb-5">
+                <div className="flex items-center justify-between border-b border-slate-200 dark:border-white/10 pb-5">
                   <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-[#ff6a00] to-[#ffaa00] text-white shadow-lg shadow-orange-500/20">
                       <Sparkles className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="text-base font-bold text-white tracking-tight">Our Purpose</h4>
-                      <p className="text-xs text-[#ffaa00] font-medium">User-Centered App Lifecycle</p>
+                      <h4 className="text-base font-bold text-slate-900 dark:text-white tracking-tight">Our Purpose</h4>
+                      <p className="text-xs text-[#ea580c] dark:text-[#ffaa00] font-medium">User-Centered App Lifecycle</p>
                     </div>
                   </div>
-                  <span className="flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-bold text-emerald-400">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse" />
                     Active Process
                   </span>
                 </div>
@@ -80,7 +80,7 @@ export function AboutSnippet() {
                         className={`group rounded-2xl border p-4 transition-all duration-300 cursor-pointer ${
                           isActive
                             ? phase.borderGlow
-                            : "border-white/10 bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.05]"
+                            : "border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-white/[0.03] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-100 dark:hover:bg-white/[0.05]"
                         }`}
                       >
                         <div className="flex items-start gap-3.5">
@@ -92,10 +92,10 @@ export function AboutSnippet() {
                             {phase.icon}
                           </div>
                           <div>
-                            <span className="text-sm font-bold text-white tracking-tight">
+                            <span className="text-sm font-bold text-slate-900 dark:text-white tracking-tight">
                               {phase.title}
                             </span>
-                            <p className="mt-1 text-xs text-zinc-400 leading-relaxed">
+                            <p className="mt-1 text-xs text-slate-600 dark:text-zinc-400 leading-relaxed">
                               {phase.desc}
                             </p>
                           </div>
@@ -106,12 +106,12 @@ export function AboutSnippet() {
                 </div>
 
                 {/* Bottom Footer Info */}
-                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-zinc-400">
+                <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs text-slate-500 dark:text-zinc-400">
                   <div className="flex items-center gap-2">
                     <Layers className="h-4 w-4 text-[#ffaa00]" />
                     <span>Android & iOS Ecosystem</span>
                   </div>
-                  <span className="font-bold text-[#ff8c1a]">Simpler Tomorrow</span>
+                  <span className="font-bold text-[#ea580c] dark:text-[#ff8c1a]">Simpler Tomorrow</span>
                 </div>
               </div>
             </Reveal>
@@ -123,10 +123,10 @@ export function AboutSnippet() {
               <div className="q9-eyebrow mb-4">
                 <span>{aboutSnippet.eyebrow}</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
                 {aboutSnippet.title}
               </h2>
-              <div className="mt-6 space-y-4 text-base sm:text-lg text-zinc-400 leading-relaxed">
+              <div className="mt-6 space-y-4 text-base sm:text-lg text-slate-600 dark:text-zinc-400 leading-relaxed">
                 {aboutSnippet.paragraphs.map((p, idx) => (
                   <p key={idx}>{p}</p>
                 ))}

@@ -48,14 +48,14 @@ export default function ContactPage() {
       <section className="relative z-20 -mt-6 sm:-mt-8 mb-4">
         <Container>
           <Reveal>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 rounded-2xl border border-white/10 bg-[#13151f]/90 p-4 shadow-xl backdrop-blur-xl">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#13151f]/90 p-4 shadow-xl backdrop-blur-xl">
               <div className="flex items-center gap-3 p-2">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-500/10 border border-orange-500/30 text-[#ff8c1a]">
                   <Clock className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Response SLA</div>
-                  <div className="text-xs sm:text-sm font-semibold text-white">&lt; 24 Hours Reply</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400">Response SLA</div>
+                  <div className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white">&lt; 24 Hours Reply</div>
                 </div>
               </div>
 
@@ -64,28 +64,28 @@ export default function ContactPage() {
                   <Globe className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Studio Timezone</div>
-                  <div className="text-xs sm:text-sm font-semibold text-white">PKT (UTC+5)</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400">Studio Timezone</div>
+                  <div className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white">PKT (UTC+5)</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 p-2">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.06] border border-white/20 text-zinc-200">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 dark:bg-white/[0.06] border border-slate-200 dark:border-white/20 text-slate-700 dark:text-zinc-200">
                   <PhoneCall className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Direct Line</div>
-                  <div className="text-xs sm:text-sm font-semibold text-white">{site.phoneDisplay}</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400">Direct Line</div>
+                  <div className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white">{site.phoneDisplay}</div>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 p-2">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400">
                   <Building2 className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">Headquarters</div>
-                  <div className="text-xs sm:text-sm font-semibold text-white">Rawalpindi, Pakistan</div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400">Headquarters</div>
+                  <div className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white">Rawalpindi, Pakistan</div>
                 </div>
               </div>
             </div>
@@ -101,9 +101,9 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-6">
               <Reveal delay={0.1}>
                 <div className="mb-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#ff8c1a]">Direct Channels</span>
-                  <h2 className="mt-1 text-2xl sm:text-3xl font-extrabold text-white">Reach Us Directly</h2>
-                  <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#ea580c] dark:text-[#ff8c1a]">Direct Channels</span>
+                  <h2 className="mt-1 text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Reach Us Directly</h2>
+                  <p className="mt-2 text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
                     Connect with our engineering leadership through phone, email, or our verified LinkedIn network.
                   </p>
                 </div>
@@ -112,19 +112,19 @@ export default function ContactPage() {
 
               {/* Studio Desk Working Hours Card */}
               <Reveal delay={0.2}>
-                <div className="rounded-[22px] border border-white/10 bg-[#13151f] p-5 shadow-xl">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#ffaa00]">Studio Hours</span>
+                <div className="rounded-[22px] border border-slate-200 dark:border-white/10 bg-white dark:bg-[#13151f] p-5 shadow-xl">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#d97706] dark:text-[#ffaa00]">Studio Hours</span>
                   <div className="mt-3 space-y-2 text-sm">
-                    <div className="flex items-center justify-between text-zinc-300">
+                    <div className="flex items-center justify-between text-slate-700 dark:text-zinc-300">
                       <span>Monday – Friday:</span>
-                      <span className="font-semibold text-white font-mono">09:00 – 18:00 PKT</span>
+                      <span className="font-semibold text-slate-900 dark:text-white font-mono">09:00 – 18:00 PKT</span>
                     </div>
-                    <div className="flex items-center justify-between text-zinc-400">
+                    <div className="flex items-center justify-between text-slate-600 dark:text-zinc-400">
                       <span>Saturday – Sunday:</span>
-                      <span className="font-mono text-zinc-500">By Special Project Appointment</span>
+                      <span className="font-mono text-slate-500 dark:text-zinc-500">By Special Project Appointment</span>
                     </div>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-white/[0.08] text-xs text-zinc-400">
+                  <div className="mt-4 pt-3 border-t border-slate-200 dark:border-white/[0.08] text-xs text-slate-500 dark:text-zinc-400">
                     We respond to technical project inquiries and RFP submissions within 1 business day.
                   </div>
                 </div>
@@ -135,9 +135,9 @@ export default function ContactPage() {
             <div className="lg:col-span-7">
               <Reveal delay={0.15}>
                 <div className="mb-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#ff8c1a]">Project Inquiry</span>
-                  <h2 className="mt-1 text-2xl sm:text-3xl font-extrabold text-white">Send Us a Message</h2>
-                  <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#ea580c] dark:text-[#ff8c1a]">Project Inquiry</span>
+                  <h2 className="mt-1 text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Send Us a Message</h2>
+                  <p className="mt-2 text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
                     Tell us about your project requirements, scope, or general inquiry. Our team will review and reply promptly.
                   </p>
                 </div>
@@ -156,10 +156,10 @@ export default function ContactPage() {
               <div className="q9-eyebrow mb-2">
                 <span>Studio Location</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white">
                 Visit Our Rawalpindi Studio HQ
               </h2>
-              <p className="mt-3 text-sm sm:text-base text-zinc-400 leading-relaxed">
+              <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-zinc-400 leading-relaxed">
                 Located in Rawalpindi City Tehsil, Punjab, Pakistan. Our studio space is designed for collaborative sprint planning and technical product architecture sessions.
               </p>
             </div>

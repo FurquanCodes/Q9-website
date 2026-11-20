@@ -21,7 +21,8 @@ export function StatCounter({
 }: StatCounterProps) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  // Strictly trigger only when the user has scrolled this component well into view (50% visibility)
+  const isInView = useInView(ref, { once: true, amount: 0.5, margin: "0px 0px -100px 0px" });
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -29,23 +30,31 @@ export function StatCounter({
       return;
     }
 
-    let start = 0;
-    const duration = 1200; // 1.2s
-    const steps = 30;
-    const increment = value / steps;
-    const stepTime = duration / steps;
+    const duration = 1800; // 1.8 seconds - smooth, noticeable count-up
+    const startTime = performance.now();
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= value) {
-        setCount(value);
-        clearInterval(timer);
+    let animationFrameId: number;
+
+    const animate = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // Ease-out cubic curve: starts distinctly and settles gracefully
+      const easeOutProgress = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(easeOutProgress * value);
+
+      setCount(currentVal);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(animate);
       } else {
-        setCount(Math.floor(start));
+        setCount(value);
       }
-    }, stepTime);
+    };
 
-    return () => clearInterval(timer);
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrameId);
   }, [isInView, value, shouldReduceMotion]);
 
   const displayValue = shouldReduceMotion ? value : count;

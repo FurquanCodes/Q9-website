@@ -10,14 +10,16 @@ interface RevealProps {
   duration?: number;
   yOffset?: number;
   className?: string;
+  amount?: number;
 }
 
 export function Reveal({
   children,
   delay = 0,
-  duration = 0.5,
-  yOffset = 24,
+  duration = 0.85,
+  yOffset = 28,
   className,
+  amount = 0.2,
 }: RevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -29,11 +31,11 @@ export function Reveal({
     <motion.div
       initial={{ opacity: 0, y: yOffset }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
+      viewport={{ once: true, amount, margin: "0px 0px -60px 0px" }}
       transition={{
         duration,
         delay,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.22, 1, 0.36, 1], // Smooth luxury cubic-bezier deceleration
       }}
       className={cn(className)}
     >

@@ -7,15 +7,29 @@ import { PageHero } from "@/components/layout/PageHero";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { approachContent } from "@/content/approach";
 import { Reveal } from "@/components/ui/Reveal";
+import { constructMetadata, generateBreadcrumbsJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Our Approach",
   description:
     "How Q9 Technologies builds apps: understand the need, build with purpose, learn through feedback, improve continuously.",
-};
+  path: "/approach",
+  keywords: [
+    "mobile app development process",
+    "iterative mobile engineering",
+    "software engineering approach",
+    "agile mobile development",
+    "user-centered app design",
+  ],
+});
 
 export default function ApproachPage() {
   const { hero, steps, callout } = approachContent;
+
+  const breadcrumbJsonLd = generateBreadcrumbsJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Our Approach", path: "/approach" },
+  ]);
 
   const stepMeta = [
     {
@@ -46,6 +60,11 @@ export default function ApproachPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* 1. Page Hero */}
       <PageHero
         eyebrow={hero.eyebrow}

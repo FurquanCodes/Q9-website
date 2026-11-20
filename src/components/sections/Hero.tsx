@@ -4,7 +4,7 @@ import React from "react";
 import { ArrowRight, Sparkles, Smartphone } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
-import { OrbitHeroStage } from "@/components/illustrations/OrbitHeroStage";
+import { AppStudioShowcase } from "@/components/illustrations/AppStudioShowcase";
 import { homeContent } from "@/content/home";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -78,10 +78,10 @@ export function Hero() {
             </Reveal>
           </div>
 
-          {/* Right Column: 3D Holographic Orbit Stage */}
+          {/* Right Column: Bespoke Mobile Studio Engineering Showcase */}
           <div className="lg:col-span-6 xl:col-span-5 flex justify-center">
             <Reveal delay={0.3}>
-              <OrbitHeroStage />
+              <AppStudioShowcase />
             </Reveal>
           </div>
         </div>

@@ -4,7 +4,11 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BackgroundBeams } from "@/components/ui/BackgroundBeams";
 import { site } from "@/config/site";
-import { generateOrganizationJsonLd, generateWebSiteJsonLd } from "@/lib/seo";
+import {
+  generateOrganizationJsonLd,
+  generateWebSiteJsonLd,
+  generateProfessionalServiceJsonLd,
+} from "@/lib/seo";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -24,9 +28,13 @@ export const metadata: Metadata = {
     "Q9 Technologies is a mobile app development company building useful Android and iOS apps across photography, productivity, utilities, and more.",
   keywords: [
     "Q9 Technologies",
-    "mobile app development",
+    "software house Rawalpindi",
+    "mobile app development Rawalpindi",
+    "mobile app development company Pakistan",
     "Android apps",
     "iOS apps",
+    "SwiftUI development",
+    "Kotlin Jetpack Compose",
     "photography apps",
     "productivity apps",
     "utility apps",
@@ -70,6 +78,7 @@ export default function RootLayout({
 }>) {
   const orgJsonLd = generateOrganizationJsonLd();
   const websiteJsonLd = generateWebSiteJsonLd();
+  const professionalServiceJsonLd = generateProfessionalServiceJsonLd();
 
   return (
     <html lang="en" className={dmSans.variable}>
@@ -81,6 +90,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceJsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--text)] antialiased selection:bg-[var(--primary)] selection:text-white">

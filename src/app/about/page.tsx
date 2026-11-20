@@ -7,19 +7,38 @@ import { PageHero } from "@/components/layout/PageHero";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { aboutContent } from "@/content/about";
 import { Reveal } from "@/components/ui/Reveal";
+import { constructMetadata, generateBreadcrumbsJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "About Us",
   description:
-    "Learn about Q9 Technologies, our mission, our vision, and how we build apps that serve real needs.",
-};
+    "Learn about Q9 Technologies, our mission, vision, and how we build mobile applications that solve real needs for everyday users.",
+  path: "/about",
+  keywords: [
+    "about Q9 Technologies",
+    "mobile app company mission",
+    "Rawalpindi app developers",
+    "software house culture",
+    "mobile engineering team",
+  ],
+});
 
 export default function AboutPage() {
   const { hero, introParagraphs, ongoingProcessCallout, mission, vision, lookingAhead } =
     aboutContent;
 
+  const breadcrumbJsonLd = generateBreadcrumbsJsonLd([
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* 1. Page Hero */}
       <PageHero
         eyebrow={hero.eyebrow}

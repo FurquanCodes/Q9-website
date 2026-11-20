@@ -9,16 +9,30 @@ import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { cultureContent } from "@/content/culture";
 import { valuesContent } from "@/content/values";
 import { Reveal } from "@/components/ui/Reveal";
+import { constructMetadata, generateBreadcrumbsJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Our Culture & Values",
   description:
-    "Our culture and values: trust, ownership, growth through merit, respect, and continuous learning.",
-};
+    "Explore the values guiding Q9 Technologies: trust, ownership, growth through merit, respect, and continuous learning.",
+  path: "/culture",
+  keywords: [
+    "Q9 Technologies culture",
+    "software house values",
+    "engineering ownership",
+    "growth through merit",
+    "tech workplace culture Pakistan",
+  ],
+});
 
 export default function CulturePage() {
   const { hero, items } = cultureContent;
   const { section: valuesSection, values } = valuesContent;
+
+  const breadcrumbJsonLd = generateBreadcrumbsJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Culture & Values", path: "/culture" },
+  ]);
 
   const cultureVisuals = [
     {
@@ -45,6 +59,11 @@ export default function CulturePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* 1. Page Hero */}
       <PageHero
         eyebrow={hero.eyebrow}

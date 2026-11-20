@@ -11,7 +11,7 @@ export function BackgroundBeams() {
       {/* 1. Subtle Perspective Grid */}
       <div className="absolute inset-0 q9-bg-grid opacity-60" />
 
-      {/* 2. Top Hero Ambient Light Orb (Radiant Amber-Orange & Gold) */}
+      {/* 2. Top Hero Ambient Light Orb (Slow, graceful drift) */}
       <motion.div
         animate={
           shouldReduceMotion
@@ -23,14 +23,14 @@ export function BackgroundBeams() {
               }
         }
         transition={{
-          duration: 12,
+          duration: 26,
           repeat: Infinity,
           ease: "easeInOut",
         }}
         className="absolute -top-36 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,106,0,0.18)_0%,rgba(255,170,0,0.08)_35%,transparent_70%)] blur-3xl"
       />
 
-      {/* 3. Right Ambient Cool Silver-Navy Orb */}
+      {/* 3. Right Ambient Warm Amber Orb */}
       <motion.div
         animate={
           shouldReduceMotion
@@ -41,14 +41,14 @@ export function BackgroundBeams() {
               }
         }
         transition={{
-          duration: 16,
+          duration: 32,
           repeat: Infinity,
           ease: "easeInOut",
         }}
         className="absolute top-1/3 -right-48 h-[550px] w-[550px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,122,0,0.1)_0%,rgba(255,170,0,0.05)_40%,transparent_70%)] blur-3xl"
       />
 
-      {/* 4. Left Ambient Warm Glow */}
+      {/* 4. Left Ambient Glow */}
       <motion.div
         animate={
           shouldReduceMotion
@@ -59,7 +59,7 @@ export function BackgroundBeams() {
               }
         }
         transition={{
-          duration: 14,
+          duration: 28,
           repeat: Infinity,
           ease: "easeInOut",
         }}

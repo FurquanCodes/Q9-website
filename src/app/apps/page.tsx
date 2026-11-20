@@ -8,12 +8,22 @@ import { CTABanner } from "@/components/sections/CTABanner";
 import { appsContent } from "@/content/apps";
 import { features } from "@/config/features";
 import { Reveal } from "@/components/ui/Reveal";
+import { constructMetadata, generateBreadcrumbsJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Apps & Products",
   description:
     "Explore mobile applications built by Q9 Technologies across photography, productivity, and utilities.",
-};
+  path: "/apps",
+  keywords: [
+    "Q9 Technologies apps",
+    "photography apps",
+    "productivity apps",
+    "utility apps",
+    "Android apps",
+    "iOS apps",
+  ],
+});
 
 export default function AppsPage() {
   // If feature flag is off, render 404
@@ -23,8 +33,17 @@ export default function AppsPage() {
 
   const { hero, emptyState, apps } = appsContent;
 
+  const breadcrumbJsonLd = generateBreadcrumbsJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Apps & Products", path: "/apps" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <PageHero
         eyebrow={hero.eyebrow}
         title={hero.title}

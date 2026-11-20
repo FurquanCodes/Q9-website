@@ -67,7 +67,7 @@ npm run format
 │   │   ├── ui/                 # Button, Logo, SectionHeader, Reveal, FeatureCard, StatCounter
 │   │   ├── sections/           # Hero, FactsStrip, WhatWeBuild, AboutSnippet, ApproachGrid, etc.
 │   │   ├── contact/            # ContactForm, ContactInfo, MapEmbed, QuoteModal
-│   │   └── illustrations/      # OrbitHeroStage (3D concentric orbit rings with interactive badges)
+│   │   └── illustrations/      # AppStudioShowcase (Interactive titanium device mockup with telemetry and live categories)
 │   ├── config/
 │   │   ├── site.ts             # SINGLE SOURCE OF TRUTH for contact, address, phone, links
 │   │   ├── features.ts         # Feature flags (apps, whatsapp, quoteModal)

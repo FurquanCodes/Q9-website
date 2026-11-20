@@ -7,7 +7,7 @@ export function BackgroundBeams() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+    <div className="q9-bg-beams-container pointer-events-none fixed inset-0 z-0 overflow-hidden transition-opacity duration-500">
       {/* 1. Subtle Perspective Grid */}
       <div className="absolute inset-0 q9-bg-grid opacity-60" />
 

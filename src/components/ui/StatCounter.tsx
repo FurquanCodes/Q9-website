@@ -68,16 +68,16 @@ export function StatCounter({
       )}
     >
       <div className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white font-mono">
-        <span className="bg-gradient-to-r from-white via-zinc-100 to-[#ffaa00] bg-clip-text text-transparent">
+        <span className="q9-stat-value bg-gradient-to-r from-white via-zinc-100 to-[#ffaa00] bg-clip-text text-transparent">
           {displayValue}
           {suffix}
         </span>
       </div>
-      <div className="mt-2 text-base font-bold text-white tracking-wide">
+      <div className="mt-2 text-base font-bold text-slate-900 dark:text-white tracking-wide">
         {label}
       </div>
       {sublabel && (
-        <div className="mt-1 text-sm text-zinc-400 font-medium">
+        <div className="mt-1 text-sm text-slate-600 dark:text-zinc-400 font-medium">
           {sublabel}
         </div>
       )}

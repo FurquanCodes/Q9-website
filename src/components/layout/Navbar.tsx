@@ -37,7 +37,7 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-400 h-24 flex items-center",
           isScrolled
-            ? "bg-[#090a0f]/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_10px_35px_rgba(0,0,0,0.6)]"
+            ? "bg-white/95 dark:bg-[#090a0f]/90 backdrop-blur-xl border-b border-slate-200/90 dark:border-white/[0.08] shadow-[0_4px_20px_-2px_rgba(15,23,42,0.06)] dark:shadow-[0_10px_35px_rgba(0,0,0,0.6)]"
             : "bg-transparent border-b border-transparent"
         )}
       >
@@ -47,7 +47,7 @@ export function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav
-            className="hidden lg:flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-[#12141c]/80 px-3 py-1.5 backdrop-blur-md shadow-inner"
+            className="hidden lg:flex items-center gap-1.5 rounded-full border border-slate-200/90 dark:border-white/[0.08] bg-white/90 dark:bg-[#12141c]/80 px-3 py-1.5 backdrop-blur-md shadow-sm dark:shadow-inner"
             aria-label="Main Navigation"
           >
             {activeLinks.map((item) => {
@@ -63,8 +63,8 @@ export function Navbar() {
                   className={cn(
                     "relative px-4 py-2 text-sm font-semibold transition-all duration-200 rounded-full",
                     isActive
-                      ? "text-white bg-gradient-to-r from-orange-600/25 to-amber-500/15 border border-[#ff7a00]/40 shadow-[0_0_16px_rgba(255,122,0,0.25)]"
-                      : "text-zinc-400 hover:text-white hover:bg-white/[0.06]"
+                      ? "text-white bg-gradient-to-r from-orange-600 to-amber-500 border border-[#ff7a00]/40 shadow-[0_0_16px_rgba(255,122,0,0.25)]"
+                      : "text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/[0.06]"
                   )}
                 >
                   {item.label}
@@ -109,7 +109,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-[#12141c] text-white transition-colors hover:border-[#ff7a00]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a00] lg:hidden cursor-pointer"
+              className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#12141c] text-slate-800 dark:text-white transition-colors hover:border-[#ff7a00]/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7a00] lg:hidden cursor-pointer shadow-sm dark:shadow-none"
               aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isMobileOpen}
               aria-controls="mobile-navigation"

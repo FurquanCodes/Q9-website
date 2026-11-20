@@ -141,7 +141,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="q9-card p-6 sm:p-8 lg:p-10 relative space-y-6"
+      className="q9-card p-6 sm:p-8 lg:p-10 relative space-y-6 bg-white dark:bg-[#13151f] border border-slate-200/80 dark:border-white/10 shadow-xl dark:shadow-2xl"
       noValidate
     >
       {/* Error Announcement Banner */}
@@ -173,7 +173,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-bold tracking-wide text-white mb-2"
+            className="block text-sm font-bold tracking-wide text-slate-900 dark:text-white mb-2"
           >
             Full Name <span className="text-[#ff7a00]">*</span>
           </label>
@@ -184,7 +184,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
             placeholder="Your name"
             aria-invalid={errors.name ? "true" : "false"}
             aria-describedby={errors.name ? "name-error" : undefined}
-            className="w-full rounded-xl border border-white/10 bg-[#0e1017] px-4 py-3 text-sm text-white placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
+            className="w-full rounded-xl border border-slate-300 dark:border-white/10 bg-slate-50 dark:bg-[#0e1017] px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:bg-white dark:focus:bg-[#0e1017] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
             {...register("name")}
           />
           {errors.name && (
@@ -198,7 +198,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-bold tracking-wide text-white mb-2"
+            className="block text-sm font-bold tracking-wide text-slate-900 dark:text-white mb-2"
           >
             Email Address <span className="text-[#ff7a00]">*</span>
           </label>
@@ -209,7 +209,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
             placeholder="you@example.com"
             aria-invalid={errors.email ? "true" : "false"}
             aria-describedby={errors.email ? "email-error" : undefined}
-            className="w-full rounded-xl border border-white/10 bg-[#0e1017] px-4 py-3 text-sm text-white placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
+            className="w-full rounded-xl border border-slate-300 dark:border-white/10 bg-slate-50 dark:bg-[#0e1017] px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:bg-white dark:focus:bg-[#0e1017] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
             {...register("email")}
           />
           {errors.email && (
@@ -225,7 +225,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
         <div>
           <label
             htmlFor="phone"
-            className="block text-sm font-bold tracking-wide text-white mb-2"
+            className="block text-sm font-bold tracking-wide text-slate-900 dark:text-white mb-2"
           >
             Phone Number <span className="text-xs text-zinc-500 font-normal">(Optional)</span>
           </label>
@@ -236,7 +236,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
             placeholder="+92 300 0000000"
             aria-invalid={errors.phone ? "true" : "false"}
             aria-describedby={errors.phone ? "phone-error" : undefined}
-            className="w-full rounded-xl border border-white/10 bg-[#0e1017] px-4 py-3 text-sm text-white placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
+            className="w-full rounded-xl border border-slate-300 dark:border-white/10 bg-slate-50 dark:bg-[#0e1017] px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:bg-white dark:focus:bg-[#0e1017] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
             {...register("phone")}
           />
           {errors.phone && (
@@ -250,7 +250,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
         <div>
           <label
             htmlFor="subject"
-            className="block text-sm font-bold tracking-wide text-white mb-2"
+            className="block text-sm font-bold tracking-wide text-slate-900 dark:text-white mb-2"
           >
             Subject <span className="text-[#ff7a00]">*</span>
           </label>
@@ -258,7 +258,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
             id="subject"
             aria-invalid={errors.subject ? "true" : "false"}
             aria-describedby={errors.subject ? "subject-error" : undefined}
-            className="w-full rounded-xl border border-white/10 bg-[#0e1017] px-4 py-3 text-sm text-white transition-colors focus:border-[#ff7a00] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
+            className="w-full rounded-xl border border-slate-300 dark:border-white/10 bg-slate-50 dark:bg-[#0e1017] px-4 py-3 text-sm text-slate-900 dark:text-white transition-colors focus:border-[#ff7a00] focus:bg-white dark:focus:bg-[#0e1017] focus:outline-none focus:ring-1 focus:ring-[#ff7a00]"
             {...register("subject")}
           >
             <option value="General inquiry">General inquiry</option>
@@ -280,7 +280,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
         <div className="flex items-center justify-between mb-2">
           <label
             htmlFor="message"
-            className="block text-sm font-bold tracking-wide text-white"
+            className="block text-sm font-bold tracking-wide text-slate-900 dark:text-white"
           >
             Message <span className="text-[#ff7a00]">*</span>
           </label>
@@ -298,7 +298,7 @@ export function ContactForm({ onSuccess, isModal = false }: ContactFormProps) {
           placeholder="Tell us about your project or inquiry..."
           aria-invalid={errors.message ? "true" : "false"}
           aria-describedby={errors.message ? "message-error" : undefined}
-          className="w-full rounded-xl border border-white/10 bg-[#0e1017] px-4 py-3 text-sm text-white placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:outline-none focus:ring-1 focus:ring-[#ff7a00] resize-y"
+          className="w-full rounded-xl border border-slate-300 dark:border-white/10 bg-slate-50 dark:bg-[#0e1017] px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-zinc-500 transition-colors focus:border-[#ff7a00] focus:bg-white dark:focus:bg-[#0e1017] focus:outline-none focus:ring-1 focus:ring-[#ff7a00] resize-y"
           {...register("message")}
         />
         {errors.message && (
